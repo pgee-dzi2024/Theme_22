@@ -6,4 +6,9 @@ def index(request):
 
 
 def second(request):
-    return render(request, 'main/second.html')
+    lst = [1, 2, 3, 4, 5,]
+    context = {
+        'var1': 'here we put var1',
+        'var2': lst,
+    }
+    return render(request, 'main/second.html', context)
